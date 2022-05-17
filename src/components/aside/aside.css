@@ -1,0 +1,118 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: whithe;
+  margin-right: 24px;
+  height: fit-content;
+  width: 248px;
+  color: green;
+  border: 1px solid #DFE0E7;
+  border-radius: 8px;
+}
+aside h3 {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 12px;
+  color: #20252b;
+}
+aside p {
+  color: #627389;
+  font-family: Inter;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+aside .title {
+  padding: 16px;
+  border-bottom: 1px solid #E7E8EF;
+}
+aside .title .p-talhoes {
+  color: #798AA4;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: none;
+}
+aside .info {
+  padding: 16px;
+  border-bottom: 1px solid #E7E8EF;
+}
+aside .info .wrapperAside p {
+  text-transform: none;
+}
+aside .info .date {
+  display: flex;
+  margin-bottom: 16px;
+}
+aside .info .date .visit {
+  margin-right: 32px;
+}
+aside .info .date .safra {
+  margin-right: 20px;
+}
+aside .info .name {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+aside .info .name .init {
+  margin-left: 16px;
+  border: 1px solid #DFE0E7;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+}
+aside .info .name .init p {
+  font-size: 14px;
+}
+aside .info .pluv span {
+  padding-right: 2px;
+}
+aside .info .pluv i {
+  color: #1854C4;
+  font-size: 14px;
+}
+aside .info .pluv p {
+  font-size: 16px;
+  font-weight: 700;
+}
+aside .info .pluv .acumulo {
+  font-size: 12px;
+  color: #627389;
+  font-weight: 400;
+  font-family: Inter;
+  text-transform: none;
+}
+aside .obs {
+  padding: 16px;
+  border-bottom: 1px solid #E7E8EF;
+}
+aside .obs p {
+  text-transform: none;
+  font-size: 14px;
+  color: #415164;
+}
+aside .press {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+aside .btn {
+  cursor: pointer;
+  color: #415164;
+  border: 1px solid #C8CED8;
+  border-radius: 4px;
+  height: 32px;
+  width: 216px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .btn span {
+  padding-right: 8px;
+}
+
+/*# sourceMappingURL=aside.css.map */
