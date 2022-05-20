@@ -17,6 +17,6 @@
 }
 @media (max-width: 751px) {
   #content {
-    width: 432px;
+    width: 100%;
   }
 }
