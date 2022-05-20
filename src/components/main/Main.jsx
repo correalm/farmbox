@@ -1,7 +1,6 @@
-import "./main.css";
-
 import Aside from "../aside/Aside";
 import Content from "../content/Content";
+import "./Main.css";
 
 const Main = () => {
   return (

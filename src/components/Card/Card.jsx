@@ -1,9 +1,6 @@
 import "./Card.css";
 
-//  npm install --save-dev sass
-
 const Card = ({ note }) => {
-  console.log("NOTE NO COMP ->", note);
   return (
     <div className="card">
       <h3>
@@ -15,7 +12,12 @@ const Card = ({ note }) => {
 
       <div className="image">
         {note.attachments.images.map((image) => (
-          <img className="img" key={image.id} src={image.high_url} />
+          <img
+            className="img"
+            key={image.id}
+            src={image.high_url}
+            alt="imagem"
+          />
         ))}
       </div>
 

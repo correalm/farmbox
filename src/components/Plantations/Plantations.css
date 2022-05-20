@@ -1,35 +1,37 @@
-h2 {
-  margin-top: 0px;
-  margin-bottom: 8px;
-}
-
-.events {
-  display: flex;
-  flex-wrap: wrap;
-}
-.events-hide {
-  display: none;
-}
-
 .event {
   width: 100%;
   margin-bottom: 16px;
 }
 .event-header {
   display: flex;
-  width: 780px;
-  border: 1px solid #DFE0E7;
+  width: 776px;
+  border: 1px solid #dfe0e7;
   border-radius: 8px;
   background-color: #fff;
   justify-content: space-between;
+}
+@media (max-width: 1049px) {
+  .event-header {
+    width: 432px;
+  }
+}
+@media (max-width: 751px) {
+  .event-header {
+    width: 100%;
+  }
 }
 .event-header .events-header-farm-title {
   display: flex;
   flex-direction: column;
   padding: 20px 16px;
-  border-right: 1px solid #E7E8EF;
+  border-right: 1px solid #e7e8ef;
   box-sizing: border-box;
   width: 90%;
+}
+@media (max-width: 1049px) {
+  .event-header .events-header-farm-title {
+    width: 91%;
+  }
 }
 .event-header .events-header-farm-title .event-header-title {
   display: flex;
@@ -38,20 +40,21 @@ h2 {
   font-family: Inter;
   font-weight: 700;
   font-size: 16px;
-  color: #20252B;
+  color: #20252b;
 }
 .event-header .events-header-farm-title .event-header-title span {
   font-family: Roboto;
   font-size: 12px;
-  color: #798AA4;
-  border: 1px solid #E7E8EF;
-  background-color: #FFF;
+  color: #798aa4;
+  border: 1px solid #e7e8ef;
+  background-color: #fff;
   padding: 1px;
   border-radius: 4px;
   height: fit-content;
   margin-left: 8px;
 }
 .event p {
+  text-transform: capitalize;
   font-size: 12px;
   color: #627389;
   font-weight: 400;
@@ -61,7 +64,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #57760A;
+  border: 1px solid #57760a;
   border-radius: 8px;
   width: fit-content;
   padding: 2px;
@@ -70,7 +73,7 @@ h2 {
 .event .plantado p {
   font-family: Roboto;
   font-weight: 700;
-  color: #57760A;
+  color: #57760a;
 }
 .event .events-header-dates {
   padding: 16px;
@@ -78,7 +81,12 @@ h2 {
   justify-content: space-between;
   width: 242px;
   align-items: center;
-  border-right: 1px solid #E7E8EF;
+  border-right: 1px solid #e7e8ef;
+}
+@media (max-width: 1049px) {
+  .event .events-header-dates {
+    display: none;
+  }
 }
 .event .events-container-arrow {
   display: flex;
@@ -87,8 +95,15 @@ h2 {
   cursor: pointer;
   width: 62px;
 }
+.event .events-container-arrow-rotate-arrow {
+  transform: rotate(180deg);
+}
+@media (max-width: 1049px) {
+  .event .events-container-arrow {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .event-container {
   display: flex;
 }
-
-/*# sourceMappingURL=HeaderNotes.css.map */

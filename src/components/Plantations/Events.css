@@ -1,0 +1,21 @@
+.events {
+  background-color: #e5e5e5;
+  display: flex;
+  flex-wrap: wrap;
+  width: 780px;
+}
+@media (max-width: 751px) {
+  .events {
+    width: 100%;
+  }
+}
+.events h2 {
+  color: #363e48;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.events-hide {
+  display: none;
+}

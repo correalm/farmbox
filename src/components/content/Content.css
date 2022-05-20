@@ -1,11 +1,22 @@
-.content {
+#content {
   display: flex;
+  flex: 1;
   flex-direction: column;
-  margin-left: 24px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: fit-content;
 }
-.content h2 {
-  margin-top: -27px;
-  color: #363E48;
+@media (max-width: 1049px) {
+  #content {
+    align-items: flex-start;
+    width: 432px;
+    flex: 0;
+  }
 }
-
-/*# sourceMappingURL=Content.css.map */
+@media (max-width: 751px) {
+  #content {
+    width: 432px;
+  }
+}

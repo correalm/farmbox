@@ -2,14 +2,12 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E7E8EF;
+  background-color: #e7e8ef;
   padding: 10px 0;
 }
 footer p {
   font-family: Inter;
   font-weight: 400px;
   font-size: 12px;
-  color: #798AA4;
+  color: #798aa4;
 }
-
-/*# sourceMappingURL=footer.css.map */

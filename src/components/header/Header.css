@@ -1,5 +1,6 @@
 header {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 20px 32px;
@@ -7,13 +8,18 @@ header {
   box-shadow: 0px 3px 12px rgba(65, 81, 100, 0.12),
     0px 3px 8px rgba(65, 81, 100, 0.24);
 }
-
-header i {
-  margin-right: 5px;
-}
-
 header h1 {
-  font-family: "Inter";
+  font-family: Inter;
   font-weight: 700;
   color: #363e48;
+  font-size: 24px;
+}
+header h1 span {
+  margin-right: 8px;
+}
+@media (max-width: 751px) {
+  header h1 {
+    width: 145px;
+    font-size: 16px;
+  }
 }

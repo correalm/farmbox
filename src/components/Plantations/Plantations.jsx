@@ -1,14 +1,15 @@
-import "./HeaderNotes.css";
-
-import Card from "../cards/Card";
+import Card from "../Card/Card";
 import { useRef } from "react";
+import "./Plantations.css";
 
-function HeaderNotes({ element, notes }) {
+function Plantations({ element, notes, index }) {
   const farmRef = useRef();
+  const arrowRef = useRef();
 
   const handleClick = (e) => {
     console.log(farmRef.current);
     farmRef.current.classList.toggle("events-hide");
+    arrowRef.current.classList.toggle("events-container-arrow-rotate-arrow");
   };
 
   return (
@@ -16,17 +17,17 @@ function HeaderNotes({ element, notes }) {
       <div className="event event-header">
         <div className="events-header-farm-title">
           <div className="event-header-title">
-            <h3 header-title> {element.name}</h3>
+            <h3> {element.name}</h3>
             <span className="ciclo">{element.cycle}° ciclo</span>
           </div>
 
-          <p cultivar>
-            <span size>
+          <p>
+            <span>
               {element.variety.name} - {element.area}ha
             </span>{" "}
           </p>
           <div className="plantado">
-            <p plantado>{element.state == "active" ? "Plantado" : ""}</p>
+            <p>{element.state === "active" ? "Plantado" : ""}</p>
           </div>
         </div>
 
@@ -55,21 +56,39 @@ function HeaderNotes({ element, notes }) {
           </div>
         </div>
 
-        <div onClick={handleClick} className="events-container-arrow">
+        <div
+          ref={arrowRef}
+          onClick={handleClick}
+          className={
+            index === 0
+              ? "events-container-arrow"
+              : "events-container-arrow events-container-arrow-rotate-arrow"
+          }
+        >
           <i className="fa-solid fa-chevron-up"></i>
         </div>
       </div>
-      <div className="farm-notes"></div>
-      <div className="events" ref={farmRef}>
-        {notes &&
-          notes.map((note) => {
-            if (note.location.id === element.id) {
-              return <Card note={note} />;
-            }
-          })}
-      </div>
+      {index === 0 ? (
+        <div className="events" ref={farmRef}>
+          {notes &&
+            notes.map((note) => {
+              if (note.location.id === element.id) {
+                return <Card key={note.id} note={note} />;
+              }
+            })}
+        </div>
+      ) : (
+        <div className="events events-hide" ref={farmRef}>
+          {notes &&
+            notes.map((note) => {
+              if (note.location.id === element.id) {
+                return <Card key={note.id} note={note} />;
+              }
+            })}
+        </div>
+      )}
     </div>
   );
 }
 
-export default HeaderNotes;
+export default Plantations;

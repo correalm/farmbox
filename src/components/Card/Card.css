@@ -4,24 +4,37 @@
   padding: 16px;
   margin-right: 9px;
   margin-bottom: 9px;
-  border: 1px solid #DFE0E7;
+  border: 1px solid #dfe0e7;
   border-radius: 8px;
   box-sizing: border-box;
   width: 380px;
+}
+@media (max-width: 1049px) {
+  .card {
+    width: 432px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+  }
+}
+@media (max-width: 751px) {
+  .card {
+    width: 100%;
+    margin-right: 0px;
+  }
 }
 .card h3 {
   margin-bottom: 8px;
   font-family: Inter;
   font-size: 16px;
   font-weight: 600;
-  color: #363E48;
+  color: #363e48;
 }
 .card span {
   padding-right: 8px;
 }
 .card span i {
   font-size: 14px;
-  color: #798AA4;
+  color: #798aa4;
 }
 .card p {
   font-size: 14px;
@@ -38,9 +51,3 @@
   cursor: pointer;
   object-fit: cover;
 }
-.card .text {
-  width: 100%;
-  word-wrap: break-word;
-}
-
-/*# sourceMappingURL=Card.css.map */
