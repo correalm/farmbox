@@ -1,5 +1,5 @@
 import Plantations from "./Plantations";
-import "./Events.css";
+import "./events.css";
 
 const PlantationsNotes = ({ plantations, notes }) => {
   if (!(plantations && notes)) return;

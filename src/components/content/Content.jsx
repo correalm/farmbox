@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import FarmNotes from "../Notes/FarmNotes";
 import PlantationsNotes from "../Plantations/PlantationsNotes";
-import "./Content.css";
+import "./content.css";
 import Load from "../load/Load";
 
 const Content = () => {

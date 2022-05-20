@@ -1,6 +1,6 @@
 import Card from "../Card/Card";
 import { useRef } from "react";
-import "./Plantations.css";
+import "./plantations.css";
 
 function Plantations({ element, notes, index }) {
   const farmRef = useRef();
