@@ -2,7 +2,7 @@ import Card from "../Card/Card";
 import { useRef } from "react";
 import "./plantations.css";
 
-function Plantations({ element, notes, index }) {
+function Plantations({ plantation, notes, index }) {
   const farmRef = useRef();
   const arrowRef = useRef();
 
@@ -17,17 +17,17 @@ function Plantations({ element, notes, index }) {
       <div className="event event-header">
         <div className="events-header-farm-title">
           <div className="event-header-title">
-            <h3> {element.name}</h3>
-            <span className="ciclo">{element.cycle}° ciclo</span>
+            <h3> {plantation.name}</h3>
+            <span className="ciclo">{plantation.cycle}° ciclo</span>
           </div>
 
           <p>
             <span>
-              {element.variety.name} - {element.area}ha
+              {plantation.variety.name} - {plantation.area}ha
             </span>{" "}
           </p>
           <div className="plantado">
-            <p>{element.state === "active" ? "Plantado" : ""}</p>
+            <p>{plantation.state === "active" ? "Plantado" : ""}</p>
           </div>
         </div>
 
@@ -39,17 +39,17 @@ function Plantations({ element, notes, index }) {
           </div>
           <div className="dates-date">
             <p>
-              {element.date !== null
+              {plantation.date !== null
                 ? element.date.split("-").reverse().join("/")
                 : "Sem data"}
             </p>
             <p>
-              {element.emergence_date
+              {plantation.emergence_date
                 ? element.emergence_date.split("-").reverse().join("/")
                 : "Sem data"}
             </p>
             <p>
-              {element.harvest_prediction_date !== null
+              {plantation.harvest_prediction_date !== null
                 ? element.harvest_prediction_date.split("-").reverse().join("/")
                 : "Sem data"}
             </p>
@@ -72,7 +72,7 @@ function Plantations({ element, notes, index }) {
         <div className="events" ref={farmRef}>
           {notes &&
             notes.map((note) => {
-              if (note.location.id === element.id) {
+              if (note.location.id === plantation.id) {
                 return <Card key={note.id} note={note} />;
               }
             })}
@@ -81,7 +81,7 @@ function Plantations({ element, notes, index }) {
         <div className="events events-hide" ref={farmRef}>
           {notes &&
             notes.map((note) => {
-              if (note.location.id === element.id) {
+              if (note.location.id === plantation.id) {
                 return <Card key={note.id} note={note} />;
               }
             })}
