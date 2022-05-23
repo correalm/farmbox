@@ -14,7 +14,7 @@ const PlantationsNotes = ({ plantations, notes }) => {
         return (
           <Plantations
             key={plantation.id}
-            element={plantation}
+            plantation={plantation}
             notes={Plantationsnotes}
             index={index}
           />
