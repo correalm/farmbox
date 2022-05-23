@@ -5,10 +5,10 @@ import "./content.css";
 import Load from "../load/Load";
 
 const Content = () => {
-  const { data: plantations, isLoading } = useQuery("plantations");
+  const { data: plantations, isLoading: isLoadingPlantations } = useQuery("plantations");
   const { data: notes, isLoading: isLoadingNotes } = useQuery("notes");
 
-  if (isLoading || isLoadingNotes) return <Load />;
+  if (isLoadingPlantations || isLoadingNotes) return <Load />;
 
   return (
     <div id="content">
